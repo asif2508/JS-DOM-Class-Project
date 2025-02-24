@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/149d80c521.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>E-commerce site</title>
+  </head>
+
+  <body>
+    <!-- navigation bar -->
+    <nav class="bg-gray-800 h-[70px] w-full">
+      <div class="max-w-[1140px] mx-auto">
+        <div class="flex justify-between items-center h-[70px]">
+          <div>
+            <h3 class="text-white text-2xl font-bold">Amazon</h3>
+          </div>
+
+          <div class="flex justify-end items-center gap-6">
+            <a
+              href="/"
+              class="text-white block font-semibold hover:text-gray-400"
+              >Home</a
+            >
+            <a
+              href="/"
+              class="text-white block font-semibold hover:text-gray-400"
+              >About</a
+            >
+            <a
+              href="/"
+              class="text-white block font-semibold hover:text-gray-400"
+              >Contact</a
+            >
+            <div
+              class="text-white block font-semibold hover:text-gray-400 cursor-pointer"
+            >
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <button
+              class="bg-blue-500 py-2 px-4 rounded text-white cursor-pointer"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Banner -->
+
+    <div class="max-w-[1140px] mx-auto my-[50px]">
+      <div
+        class="h-[600px] w-full bg-[url(/assets/banner.jpg)] bg-cover bg-center rounded-[20px] overflow-hidden relative z-0"
+      >
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-[#00000080] z-[1]"
+        ></div>
+        <div
+          class="relative z-10 flex flex-col justify-center items-center h-full gap-3"
+        >
+          <h3 class="text-white text-5xl font-semibold">Welcome to Amazon</h3>
+          <h3 class="text-white text-5xl font-semibold">
+            Buy your favorite products
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- products -->
+    <div class="max-w-[1140px] mx-auto mb-[80px]">
+      <h3 class="text-2xl font-semibold text-start mb-[20px]">All Products</h3>
+
+      <div id="products" class="grid grid-cols-4 gap-4"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
