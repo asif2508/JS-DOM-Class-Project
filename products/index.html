@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script
+      src="https://kit.fontawesome.com/149d80c521.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body id="body" class="">
+    <!-- navigation bar -->
+
+    <!-- desktop navigation -->
+    <nav class="bg-gray-800 h-[70px] w-full hidden lg:block">
+      <div class="max-w-[1140px] mx-auto">
+        <div class="flex justify-between items-center h-[70px]">
+          <div>
+            <h3 class="text-white text-2xl font-bold">Amazon</h3>
+          </div>
+
+          <div class="flex justify-end items-center gap-6">
+            <a
+              href="/"
+              class="text-white block font-semibold hover:text-gray-400"
+              >Home</a
+            >
+            <a
+              href="/"
+              class="text-white block font-semibold hover:text-gray-400"
+              >About</a
+            >
+            <a
+              href="/"
+              class="text-white block font-semibold hover:text-gray-400"
+              >Contact</a
+            >
+            <div
+              class="text-white block font-semibold hover:text-gray-400 cursor-pointer relative"
+            >
+              <div
+                id="cart"
+                class="absolute top-[-10px] right-[-10px] bg-[red] text-white h-[16px] w-[16px] text-[12px] text-center rounded-[50%]"
+              ></div>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <button
+              class="bg-blue-500 py-2 px-4 rounded text-white cursor-pointer"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- mobile navigation -->
+    <nav class="bg-gray-800 h-[70px] w-full block lg:hidden">
+      <div class="mx-[15px]">
+        <div class="flex justify-between items-center h-[70px]">
+          <div>
+            <h3 class="text-white text-2xl font-bold">Amazon</h3>
+          </div>
+
+          <div class="flex justify-end items-center gap-6">
+            <div
+              class="text-white block font-semibold hover:text-gray-400 cursor-pointer relative"
+            >
+              <div
+                id="cartMobile"
+                class="absolute top-[-10px] right-[-10px] bg-[red] text-white h-[16px] w-[16px] text-[12px] text-center rounded-[50%]"
+              ></div>
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div onclick="hideMenuBar()" id="menu">
+              <i class="fas fa-bars text-white"></i>
+            </div>
+            <div onclick="showMenuBar()" class="hidden" id="close">
+              <i class="fas fa-times text-white"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile nav item -->
+      <div
+        class="h-[calc(100vh-70px)] fixed bottom-0 left-0 w-[100%] bg-gray-800 z-10 hidden"
+        id="mobileNav"
+      >
+        <div class="flex flex-col justify-start items-center gap-6">
+          <a href="/" class="text-white block font-semibold hover:text-gray-400"
+            >Home</a
+          >
+          <a href="/" class="text-white block font-semibold hover:text-gray-400"
+            >About</a
+          >
+          <a href="/" class="text-white block font-semibold hover:text-gray-400"
+            >Contact</a
+          >
+
+          <button
+            class="bg-blue-500 py-2 px-4 rounded text-white cursor-pointer"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section id="product" class="max-w-[1140px] mx-auto mt-[60px]"></section>
+
+    <script src="productDetails.js"></script>
+  </body>
+</html>
